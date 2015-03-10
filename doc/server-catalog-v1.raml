@@ -1,0 +1,202 @@
+#%RAML 0.8
+title: Server Catalog
+version: v1
+
+/servers: 
+  post:
+    description: Create a Server record. It can create apps or associate exists apps to Server record
+    body:
+      application/json: 
+        example: |
+          {
+            "hostname": "Game Server",
+            "apps": [
+                  {
+                    "name": "Game 1",
+                    "owner": "joao@gmail.com"
+                  },
+                  {
+                    "id": 2
+                  }
+                ]
+          } 
+    responses:
+      200:
+        body:
+          application/json: 
+            example: |
+              {
+                "id": 1,
+                "hostname": "Game Server"
+                "apps": [
+                  {
+                    "id": 1,
+                    "name": "Game 1",
+                    "owner": "joao@gmail.com"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Game 2",
+                    "owner": "jose@gmail.com"
+                  }
+                ]
+              }
+  put:
+    description: Update server record
+    body:
+      application/json: 
+        example: |
+          {
+            "id": 1,
+            "hostname": "Game Server X",
+            "apps": [
+                  {
+                    "id": 1,
+                    "name": "Game 1x",
+                    "owner": "joao@gmail.com"
+                  }
+            ]
+          } 
+    responses:
+      200:
+        body:
+          application/json: 
+            example: |
+              {
+                "id": 1,
+                "hostname": "Game Server X",
+                "apps": [
+                  {
+                    "id": 1,
+                    "name": "Game 1x",
+                    "owner": "joao@gmail.com"
+                  }
+                ]
+              }
+  get:
+    description: Get last 10 updated servers
+    responses:
+    body:
+          application/json: 
+            example: |
+              {
+                "data": [
+                  {
+                    "id": 1,
+                    "hostname": "Game Server X",
+                    "apps": [
+                      {
+                        "id": 1,
+                        "name": "Game 1x",
+                        "owner": "joao@gmail.com"
+                      }
+                    ]
+                  }
+                  //{...},{...}
+                ],
+                "total": 100,
+                "offset": 0
+              }
+  /{id}/:
+    get:
+      description: Get server record with {id}
+      responses:
+        200:
+          body:
+            application/json: 
+              example: |
+                {
+                  "id": 1,
+                  "hostname": "Game Server X",
+                  "apps": [
+                    {
+                      "id": 1,
+                      "name": "Game 1x",
+                      "owner": "joao@gmail.com"
+                    }
+                  ]
+                }
+        404:
+          body:
+            application/json: 
+              example: |
+                {msg: "{id} Not found!"}
+      
+    delete:
+      description: Delete a server record
+      responses:
+        200:
+          description: Deleted with success!      
+          
+/applications:
+  put:
+    description: Create Application record
+    body:
+      application/json:
+        example: |
+         {
+          "name": "Game X1",
+          "owner": "joao@gmail.com"
+         } 
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+             {
+              "id" : 1,
+              "name": "Game X1",
+              "owner": "joao@gmail.com"
+             }    
+      400:
+        body:
+          application/json:
+            example: |
+              {
+                "data": 
+                  {
+                    "name": "Game X1",
+                    "owner": "joao@gmail.com"
+                  },
+                "erros": [
+                  {"name": "already exists."}
+                ] 
+              }
+        
+  post:
+    description: Update Application record
+    body:
+      application/json:
+        example: |
+         {
+            "id": 1,
+            "name": "Game 1.1",
+            "owner": "jose@gmail.com"
+         } 
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+             {
+              "id" : 1,
+              "name": "Game 1.1",
+              "owner": "jose@gmail.com"
+             }    
+  /{id}/:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+               {
+                "id" : 1,
+                "name": "Game 1.1",
+                "owner": "jose@gmail.com"
+               }
+        404:
+          description: "Not found!"
+    delete:
+      description: "Delete a Application record with {id}"
+      

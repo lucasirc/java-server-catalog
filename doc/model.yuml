@@ -1,5 +1,4 @@
-// def
 [Server|hostname:String]
 [Application|name:String;owner:String]
 //associations
-[Server]->[Application]
+[Server]-0..*>[Application]
