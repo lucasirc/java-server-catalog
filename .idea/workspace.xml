@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f22e0f9e-a4de-4cd0-af73-892aa3230779" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/model/Server.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/ServerDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ServerResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ServerResourceService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ServerV1Transformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ApplicationV1Transformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ApplicationV1Transformer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceService.java" afterPath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceTransformer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ServerResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ServerResource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ServerV1Transformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ServerV1Transformer.java" />
     </list>
     <ignored path="server-catalog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,16 +34,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ApplicationDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/ApplicationDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="990">
-              <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/model/Server.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -60,8 +47,8 @@
       <file leaf-file-name="ServerResource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ServerResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="720">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="846">
+              <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -84,12 +71,10 @@
       <file leaf-file-name="ServerV1Transformer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ServerV1Transformer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="174" max-vertical-offset="792">
-              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="846">
+              <caret line="36" column="57" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1001#1002#0" expanded="true" />
-                <element signature="e#1028#1029#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,7 +96,17 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceTransformer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-              <caret line="6" column="16" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="16" />
+              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationV1Transformer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ApplicationV1Transformer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="486">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="15" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -120,8 +115,8 @@
       <file leaf-file-name="ResourceService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2038835" vertical-offset="0" max-vertical-offset="618">
-              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.49421486" vertical-offset="133" max-vertical-offset="738">
+              <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -406,12 +401,13 @@
         <option value="$PROJECT_DIR$/src/test/java/com/lucasirc/servercatalog/service/ApplicationResourceServiceTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ApplicationResourceService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/ApplicationDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ServerResourceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceTransformer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ServerResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceTransformer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ApplicationV1Transformer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ServerV1Transformer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceService.java" />
       </list>
     </option>
   </component>
@@ -779,7 +775,7 @@
       <recent name="com.lucasirc.servercatalog.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApplicationV1TransformerTests.testEntityToMap">
+  <component name="RunManager" selected="Application.Container">
     <configuration default="false" name="build" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="server-catalog" />
       <setting name="path" value="file://$PROJECT_DIR$/build.gradle" />
@@ -811,7 +807,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="server-catalog" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -1060,12 +1062,12 @@
       <created>1426037517823</created>
       <option name="number" value="Default" />
       <updated>1426037517823</updated>
-      <workItem from="1426037521644" duration="3074000" />
+      <workItem from="1426037521644" duration="3963000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3074000" />
+    <option name="totallyTimeSpent" value="3963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-3" width="1370" height="740" extended-state="6" />
@@ -1118,7 +1120,9 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -1180,14 +1184,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ApplicationV1Transformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/ApplicationDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="990">
@@ -1208,14 +1204,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1404">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1253,30 +1241,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ServerV1Transformer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ServerResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="174" max-vertical-offset="792">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1001#1002#0" expanded="true" />
-            <element signature="e#1028#1029#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="846">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ServerResource.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceTransformer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="720">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ApplicationV1Transformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="486">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ServerV1Transformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="846">
+          <caret line="36" column="57" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2038835" vertical-offset="0" max-vertical-offset="618">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.49421486" vertical-offset="133" max-vertical-offset="738">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
           <folding />
         </state>
       </provider>

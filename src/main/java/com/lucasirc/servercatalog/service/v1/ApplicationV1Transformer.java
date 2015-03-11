@@ -11,7 +11,7 @@ public class ApplicationV1Transformer implements ResourceTransformer<Application
 
 
     @Override
-    public Application mapToEntity(Map map) {
+    public Application contentToEntity(String content) {
         return null;
     }
 

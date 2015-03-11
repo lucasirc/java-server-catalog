@@ -4,6 +4,6 @@ import java.util.Map;
 
 public interface ResourceTransformer<T> {
 
-    public T mapToEntity(Map map);
+    public T contentToEntity(String content);
     public Map entityToMap(T entity);
 }

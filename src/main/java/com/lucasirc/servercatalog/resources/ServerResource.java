@@ -30,14 +30,21 @@ public class ServerResource {
             JsonObject json = new JsonObject();
             json.addProperty("msg", id + " not found!");
 
-
             return Response.status(Response.Status.NOT_FOUND).entity(json.toString()).build();
         }
         String json = new Gson().toJson(map);
         return Response.ok(json, MediaType.APPLICATION_JSON).build();
     }
 
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response post(String content) {
 
+        Server server = getResourceService().create(content);
+
+        URI uri = URI.create("/"+version+"/servers/" +server.getId());
+        return Response.created(uri).build();
+    }
 
     public ServerResourceService getResourceService() {
         return ResourceFactory.getServerService(version);

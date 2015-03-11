@@ -1,5 +1,6 @@
 package com.lucasirc.servercatalog.service.v1;
 
+import com.google.gson.Gson;
 import com.lucasirc.servercatalog.model.Application;
 import com.lucasirc.servercatalog.model.Server;
 import com.lucasirc.servercatalog.service.ResourceTransformer;
@@ -31,8 +32,10 @@ public class ServerV1Transformer implements ResourceTransformer<Server> {
     }
 
     @Override
-    public Server mapToEntity(Map map) {
-        return null;
+    public Server contentToEntity(String content) {
+
+        return new Gson().fromJson(content, Server.class);
+
     }
 
 }
