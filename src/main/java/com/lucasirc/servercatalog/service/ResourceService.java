@@ -5,8 +5,8 @@ import java.util.Map;
 
 public abstract class ResourceService<T>{
 
-    ResourceTransformer<T> transformer;
-    DefaultDAO<T> dao;
+    protected ResourceTransformer<T> transformer;
+    protected DefaultDAO<T> dao;
 
     public ResourceService(ResourceTransformer<T> transformer) {
         this.transformer = transformer;
