@@ -68,8 +68,9 @@ public class ServerDAO extends DefaultDAO<Server> {
 
 
 
-    public void delete(long id) {
-        System.out.println("Removendo: " + id);
-        map.remove(id);
+    public boolean delete(Server server) {
+        System.out.println("Removendo: " + server.getId());
+        map.remove(server.getId());
+        return true;
     }
 }

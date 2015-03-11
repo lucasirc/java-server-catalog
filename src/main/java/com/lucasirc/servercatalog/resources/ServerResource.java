@@ -21,6 +21,17 @@ public class ServerResource {
     String version;
 
     @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response list() {
+
+        List list = getResourceService().list(0l,10l);
+
+        String json = new Gson().toJson(list);
+        return Response.ok(json, MediaType.APPLICATION_JSON).build();
+    }
+
+
+    @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response get(@PathParam("id") long id) {
@@ -44,6 +55,19 @@ public class ServerResource {
 
         URI uri = URI.create("/"+version+"/servers/" +server.getId());
         return Response.created(uri).build();
+    }
+
+    @DELETE
+    @Path("{id}")
+    public Response delete(@PathParam("id") long id){
+
+        ServerResourceService service = getResourceService();
+
+        service.delete(id);
+
+
+
+        return Response.ok().build();
     }
 
     public ServerResourceService getResourceService() {

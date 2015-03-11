@@ -48,4 +48,11 @@ public class ApplicationDAO extends DefaultDAO<Application> {
         return app;
     }
 
+    @Override
+    public boolean delete(Application entity) {
+        System.out.println("Removendo: " + entity.getId());
+        map.remove(entity.getId());
+        return true;
+    }
+
 }
