@@ -1,7 +1,10 @@
 package com.lucasirc.servercatalog.dao;
 
 
+import com.lucasirc.servercatalog.core.ServerCatalog;
 import com.lucasirc.servercatalog.model.Application;
+import de.caluga.morphium.Morphium;
+import de.caluga.morphium.MorphiumConfig;
 
 import java.util.HashMap;
 import java.util.List;
@@ -9,7 +12,10 @@ import java.util.Map;
 import java.util.Random;
 
 public class ApplicationDAO extends DefaultDAO<Application> {
-
+    Morphium morphium;
+    public ApplicationDAO() {
+        morphium = ServerCatalog.morphium;
+    }
 
     static final Map<Long, Application> map = new HashMap<Long, Application>();
     static {
@@ -26,7 +32,7 @@ public class ApplicationDAO extends DefaultDAO<Application> {
     }
 
     @Override
-    public List<Application> list(long offset, long max) {
+    public List<Application> list(int offset, int max) {
         return null;
     }
 
@@ -43,8 +49,9 @@ public class ApplicationDAO extends DefaultDAO<Application> {
 
             app.setName(appTmp.getName());
             app.setOwner(appTmp.getOwner());
-
         }
+        morphium.store(app);
+
         return app;
     }
 
@@ -52,6 +59,7 @@ public class ApplicationDAO extends DefaultDAO<Application> {
     public boolean delete(Application entity) {
         System.out.println("Removendo: " + entity.getId());
         map.remove(entity.getId());
+
         return true;
     }
 

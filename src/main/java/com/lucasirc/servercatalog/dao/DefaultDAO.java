@@ -8,9 +8,10 @@ public abstract class DefaultDAO<T> {
 
     public abstract T get(long id) ;
 
-    public abstract List<T> list(long offset, long max);
+    public abstract List<T> list(int offset, int max);
 
     public abstract T save(T server);
 
     public abstract boolean delete(T entity);
+
 }

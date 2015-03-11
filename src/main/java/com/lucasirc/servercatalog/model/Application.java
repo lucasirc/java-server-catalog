@@ -1,7 +1,12 @@
 package com.lucasirc.servercatalog.model;
 
+import de.caluga.morphium.annotations.Entity;
+import de.caluga.morphium.annotations.Id;
+
+@Entity(translateCamelCase = true)
 public class Application {
 
+    @Id
     private Long id;
     private String name;
     private String owner;

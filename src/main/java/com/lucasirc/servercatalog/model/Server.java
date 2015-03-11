@@ -1,16 +1,25 @@
 package com.lucasirc.servercatalog.model;
 
+import de.caluga.morphium.annotations.Entity;
+import de.caluga.morphium.annotations.Id;
+import de.caluga.morphium.annotations.Reference;
+import de.caluga.morphium.annotations.caching.Cache;
+import org.bson.types.ObjectId;
+
 import java.util.List;
-
+@Entity(translateCamelCase = true)
+@Cache
 public class Server {
-
+    @Id
     private Long id;
-
     private String hostname;
+
+    @Reference
     private List<Application> apps;
 
     public Server(Long id, String hostname) {
         this.id = id;
+
         this.hostname = hostname;
     }
 

@@ -40,7 +40,7 @@ public abstract class ResourceService<T>{
     public List<Map> list(long offset, long max) {
         List<Map> list = new ArrayList<Map>();
 
-        List<T> servers = dao.list(offset, max);
+        List<T> servers = dao.list(Long.valueOf(offset).intValue(), Long.valueOf(max).intValue());
 
         for( int i = 0; i < servers.size(); i++) {
             T server = servers.get(i);
