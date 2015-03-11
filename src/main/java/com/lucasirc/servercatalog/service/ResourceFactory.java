@@ -8,7 +8,7 @@ public class ResourceFactory {
     public static final String DEFAULT_VERSION = "v1";
 
     public static ServerResourceService getServerService(String version) {
-        System.out.println("Application Version: " + version);
+        System.out.println("Server Version: " + version);
         if ( version == null || DEFAULT_VERSION.equals(version)) {
             ServerV1Transformer transformer = new ServerV1Transformer();
             return new ServerResourceService(transformer);

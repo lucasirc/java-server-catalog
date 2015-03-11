@@ -56,7 +56,7 @@ public abstract class ResourceService<T>{
             return dao.delete(entity);
 
         }catch (Exception e) {
-            throw new RuntimeException("Error: cant delete server", e);
+            throw new RuntimeException("Error: cant delete server record, id: " + id, e);
         }
     }
 

@@ -50,7 +50,6 @@ public class ServerResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response post(String content) {
-
         Server server = getResourceService().create(content);
 
         URI uri = URI.create("/"+version+"/servers/" +server.getId());
