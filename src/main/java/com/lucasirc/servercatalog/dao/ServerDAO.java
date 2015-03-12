@@ -1,10 +1,9 @@
 package com.lucasirc.servercatalog.dao;
 
-import com.lucasirc.servercatalog.core.ServerCatalog;
 import com.lucasirc.servercatalog.model.Application;
 import com.lucasirc.servercatalog.model.Server;
 import de.caluga.morphium.Morphium;
-import de.caluga.morphium.MorphiumConfig;
+import de.caluga.morphium.MorphiumSingleton;
 import de.caluga.morphium.async.AsyncOperationCallback;
 import de.caluga.morphium.async.AsyncOperationType;
 import de.caluga.morphium.query.Query;
@@ -14,7 +13,7 @@ import java.util.*;
 public class ServerDAO extends DefaultDAO<Server> {
     Morphium morphium;
     public ServerDAO() {
-        morphium = ServerCatalog.morphium;
+        morphium = MorphiumSingleton.get();
     }
 
     @Override

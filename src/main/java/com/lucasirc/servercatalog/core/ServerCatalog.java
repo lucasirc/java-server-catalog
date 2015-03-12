@@ -4,6 +4,7 @@ package com.lucasirc.servercatalog.core;
 
 import de.caluga.morphium.Morphium;
 import de.caluga.morphium.MorphiumConfig;
+import de.caluga.morphium.MorphiumSingleton;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -21,16 +22,7 @@ public class ServerCatalog {
     public static Morphium morphium;
 
     static {
-        try {
-            MorphiumConfig cfg = new MorphiumConfig();
-            cfg.setDatabase("testdb");
-            cfg.addHost("localhost", 27017);
-            morphium = new Morphium(cfg);
-        }catch (Exception e ) {
-            e.printStackTrace();
-            System.exit(1);
-        }
-
+        connectDb();
     }
 
     public static void main(String[] args) throws IOException {
@@ -51,5 +43,20 @@ public class ServerCatalog {
         System.out.println("Server running: "+ link);
         return server;
     }
-
+    public static void connectDb() {
+        try {
+        //Configure your connection to Mongo
+            if (!MorphiumSingleton.isConfigured()) {
+                MorphiumConfig cfg = new MorphiumConfig();
+                cfg.setDatabase("testdb");
+                cfg.addHost("localhost", 27017);
+                cfg.setWriteCacheTimeout(100);
+                MorphiumSingleton.setConfig(cfg);
+                MorphiumSingleton.get();
+            }
+        }catch (Exception e ) {
+            e.printStackTrace();
+            System.exit(1);
+        }
+    }
 }
