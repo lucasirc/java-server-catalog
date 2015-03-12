@@ -38,7 +38,7 @@ public class ServerCatalogConfig {
 
     public static APP_ENV getEMV(){
         if (env == null){
-            String envVariable = System.getenv("ENV");
+            String envVariable = System.getenv("ENV") != null ? System.getenv("ENV") : System.getProperty("ENV");
             System.out.println("ENV: " + envVariable);
             env = (envVariable != null && !"".equals(envVariable)) ? APP_ENV.valueOf(envVariable) : APP_ENV.DEV;
         }
