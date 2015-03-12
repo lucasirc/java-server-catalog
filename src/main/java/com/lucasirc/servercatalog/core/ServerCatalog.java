@@ -21,7 +21,7 @@ public class ServerCatalog {
 
     public static final Logger log = Logger.getLogger(ServerCatalog.class);
     public static final String host = "localhost";
-    public static final int port = 8080;
+    public static final int port = 8081;
     public static final String link = "http://" + host + ":" + port+"/";
 
     public static void main(String[] args) throws IOException {
@@ -31,6 +31,9 @@ public class ServerCatalog {
 
         System.in.read();
         server.shutdownNow();
+
+        closeDbConnection();
+
     }
 
     public static HttpServer startServer() {
@@ -38,8 +41,8 @@ public class ServerCatalog {
 
         URI uri = URI.create(link);
         ResourceConfig config = new ResourceConfig().packages("com.lucasirc.servercatalog");
-
         HttpServer server = GrizzlyHttpServerFactory.createHttpServer(uri, config);
+
 
         log.info("Server running: "+ link);
         return server;
@@ -49,9 +52,29 @@ public class ServerCatalog {
         //Configure your connection to Mongo
             if (!MorphiumSingleton.isConfigured()) {
                 MorphiumConfig cfg = new MorphiumConfig();
-                cfg.setDatabase("testdb");
-                cfg.addHost("localhost", 27017);
+
+                String dbName = ServerCatalogConfig.getConfig("mongodb.name");
+                String user = ServerCatalogConfig.getConfig("mongodb.user");
+
+
+                String passwd = ServerCatalogConfig.getConfig("mongodb.password");
+
+                int port = Integer.valueOf(ServerCatalogConfig.getConfig("mongodb.port"));
+                String host = ServerCatalogConfig.getConfig("mongodb.host");
+
+                log.info("MongoDb config: " + "dbname: " +dbName + ", host: " + host + ", port:"+ port + ", user: " + user);
+
+
+                if(user != null )
+                    cfg.setMongoAdminUser(user);
+
+                if (passwd != null)
+                    cfg.setMongoAdminPwd(passwd);
+
+                cfg.setDatabase(dbName);
+                cfg.addHost(host, port);
                 cfg.setWriteCacheTimeout(100);
+
                 MorphiumSingleton.setConfig(cfg);
                 MorphiumSingleton.get();
             }
@@ -61,9 +84,12 @@ public class ServerCatalog {
             System.exit(1);
         }
     }
+    public static void closeDbConnection() {
+        log.info("Close db connection.");
+        MorphiumSingleton.get().close();
+    }
     public static void configureLogging() {
         //BasicConfigurator.configure();
-
         try {
             InputStream config = ServerCatalog.class.getClassLoader().getResourceAsStream("log4j.properties");
             PropertyConfigurator.configure(config);
@@ -72,7 +98,5 @@ public class ServerCatalog {
             BasicConfigurator.configure();
             log.error("Erro ao iniciar configuração de log", e);
         }
-
-
     }
 }

@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'war'
 
 sourceCompatibility = 1.5
 version = '1.0'
@@ -16,10 +17,13 @@ dependencies {
 
     compile 'org.glassfish.jersey.containers:jersey-container-grizzly2-http:2.4.1'
 
+    compile 'javax.servlet:servlet-api:2.5'
+
 
     compile 'org.glassfish.jersey.core:jersey-client:2.5'
     compile 'org.glassfish.jersey.core:jersey-common:2.5'
     compile 'org.glassfish.jersey.core:jersey-server:2.5'
+    compile 'org.glassfish.jersey.containers:jersey-container-servlet-core:2.5'
 
     compile 'com.google.code.gson:gson:2.2.4'
 
