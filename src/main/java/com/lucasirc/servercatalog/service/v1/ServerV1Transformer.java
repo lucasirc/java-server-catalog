@@ -40,4 +40,11 @@ public class ServerV1Transformer implements ResourceTransformer<Server> {
 
     }
 
+    @Override
+    public Server contentToEntity(long id, String content) {
+        Server server = contentToEntity(content);
+        server.setId(id);
+        return server;
+    }
+
 }

@@ -38,6 +38,20 @@ public abstract class ResourceService<T>{
         return entitySaved;
     }
 
+    public T update(long id, String content) {
+        T entity = dao.get(id);
+
+        if (entity == null) {
+            return entity;
+        }
+
+        T obj = transformer.contentToEntity(id, content);
+
+        T entitySaved = dao.save(obj);
+
+        return entitySaved;
+    }
+
     public List<Map> list(long offset, long max) {
         List<Map> list = new ArrayList<Map>();
 

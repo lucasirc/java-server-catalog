@@ -17,6 +17,14 @@ public class ApplicationV1Transformer implements ResourceTransformer<Application
     }
 
     @Override
+    public Application contentToEntity(long id, String content) {
+        Application app = contentToEntity(content);
+        app.setId(id);
+
+        return app;
+    }
+
+    @Override
     public Map entityToMap(Application app) {
         Map<String, Object> map = new HashMap<String, Object>();
 
@@ -26,4 +34,6 @@ public class ApplicationV1Transformer implements ResourceTransformer<Application
 
         return map;
     }
+
+
 }
