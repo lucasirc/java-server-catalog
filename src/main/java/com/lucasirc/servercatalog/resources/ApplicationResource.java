@@ -7,6 +7,9 @@ import com.lucasirc.servercatalog.model.Server;
 import com.lucasirc.servercatalog.service.ApplicationResourceService;
 import com.lucasirc.servercatalog.service.ResourceFactory;
 import com.lucasirc.servercatalog.service.ServerResourceService;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.apache.log4j.spi.LoggerFactory;
 
 import javax.ws.rs.*;
 
@@ -19,6 +22,8 @@ import java.util.Map;
 @Path("{version}/applications")
 public class ApplicationResource {
 
+    public static final Logger log = LogManager.getLogger(ApplicationResource.class);
+
     @PathParam("version")
     String version;
 
@@ -26,7 +31,7 @@ public class ApplicationResource {
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response get(@PathParam("id") long id) {
-        System.out.println("Appls: " + id);
+        log.debug("App find: " + id);
         Map appMap = getAppResourceService().get(id);
 
 

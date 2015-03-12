@@ -5,6 +5,7 @@ package com.lucasirc.servercatalog.core;
 import de.caluga.morphium.Morphium;
 import de.caluga.morphium.MorphiumConfig;
 import de.caluga.morphium.MorphiumSingleton;
+import org.apache.log4j.BasicConfigurator;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -21,11 +22,9 @@ public class ServerCatalog {
     public static final String link = "http://" + host + ":" + port+"/";
     public static Morphium morphium;
 
-    static {
-        connectDb();
-    }
-
     public static void main(String[] args) throws IOException {
+        connectDb();
+        BasicConfigurator.configure();
         HttpServer server = startServer();
 
         System.in.read();
