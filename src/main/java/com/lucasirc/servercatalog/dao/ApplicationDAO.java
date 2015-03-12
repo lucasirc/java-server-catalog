@@ -3,8 +3,12 @@ package com.lucasirc.servercatalog.dao;
 
 import com.lucasirc.servercatalog.core.ServerCatalog;
 import com.lucasirc.servercatalog.model.Application;
+import com.lucasirc.servercatalog.model.Server;
 import de.caluga.morphium.Morphium;
 import de.caluga.morphium.MorphiumConfig;
+import de.caluga.morphium.MorphiumSingleton;
+import de.caluga.morphium.query.Query;
+import org.glassfish.jersey.message.internal.XmlCollectionJaxbProvider;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,35 +18,39 @@ import java.util.Random;
 public class ApplicationDAO extends DefaultDAO<Application> {
     Morphium morphium;
     public ApplicationDAO() {
-        morphium = ServerCatalog.morphium;
-    }
-
-    static final Map<Long, Application> map = new HashMap<Long, Application>();
-    static {
-        map.put(1l, new Application(1l, "Game 1", "jose@gmail.com"));
-        map.put(2l, new Application(2l, "Game 2", "joaos@gmkl.com"));
-        map.put(3l, new Application(3l, "Email 2", "amand@gmkl.com"));
-        map.put(4l, new Application(4l, "Email 2", "pria@gmkl.com"));
+        morphium = MorphiumSingleton.get();
     }
 
     @Override
     public Application get(long id) {
-        System.out.println("Buscando App: " + id);
-        return map.get(id);
+        System.out.println("Buscando: " + id);
+        Query<Application> query = morphium.createQueryFor(Application.class);
+
+        Application app = query.f("id").eq(id).get();
+
+        return app;
     }
 
     @Override
     public List<Application> list(int offset, int max) {
-        return null;
+        try {
+            Query<Application> query=morphium.createQueryFor(Application.class);
+
+            query = query.skip(offset).limit(max);
+
+            return query.asList();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao consultar apps, offset: " + offset + ", max: " + max, e);
+        }
     }
 
     @Override
     public Application save(Application appTmp) {
         Application app;
 
-        if ( appTmp.getId() != 0) {
+        if ( appTmp.getId() == null || appTmp.getId() == 0 ) {
             appTmp.setId(new Random().nextLong());
-            map.put(appTmp.getId(), appTmp);
             app = appTmp;
         } else {
             app = get(appTmp.getId());
@@ -58,7 +66,7 @@ public class ApplicationDAO extends DefaultDAO<Application> {
     @Override
     public boolean delete(Application entity) {
         System.out.println("Removendo: " + entity.getId());
-        map.remove(entity.getId());
+        morphium.delete(entity);
 
         return true;
     }
