@@ -64,8 +64,6 @@ public class ServerResource {
 
         service.delete(id);
 
-
-
         return Response.ok().build();
     }
 

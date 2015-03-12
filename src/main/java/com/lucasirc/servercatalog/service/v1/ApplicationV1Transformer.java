@@ -1,5 +1,6 @@
 package com.lucasirc.servercatalog.service.v1;
 
+import com.google.gson.Gson;
 import com.lucasirc.servercatalog.model.Application;
 import com.lucasirc.servercatalog.service.ApplicationResourceService;
 import com.lucasirc.servercatalog.service.ResourceTransformer;
@@ -12,7 +13,7 @@ public class ApplicationV1Transformer implements ResourceTransformer<Application
 
     @Override
     public Application contentToEntity(String content) {
-        return null;
+        return new Gson().fromJson(content, Application.class);
     }
 
     @Override
