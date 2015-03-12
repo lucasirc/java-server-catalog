@@ -8,9 +8,9 @@ import com.lucasirc.servercatalog.service.ServerResourceService;
 import com.lucasirc.servercatalog.service.ResourceFactory;
 import org.apache.log4j.Logger;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import javax.ws.rs.core.*;
 import java.net.URI;
 import java.util.List;
 import java.util.Map;
@@ -22,6 +22,7 @@ public class ServerResource {
 
     @PathParam("version")
     String version;
+    @Context UriInfo uriInfo;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -49,10 +50,7 @@ public class ServerResource {
         Map map = getResourceService().get(id);
 
         if(map == null) {
-            JsonObject json = new JsonObject();
-            json.addProperty("msg", id + " not found!");
-
-            return Response.status(Response.Status.NOT_FOUND).entity(json.toString()).build();
+            return notFound(id);
         }
         String json = new Gson().toJson(map);
         return Response.ok(json, MediaType.APPLICATION_JSON).build();
@@ -64,19 +62,35 @@ public class ServerResource {
         try {
             Server server = getResourceService().create(content);
 
-            URI uri = URI.create("/"+version+"/servers/" +server.getId());
+            URI uri = URI.create(uriInfo.getRequestUri() + "/" +server.getId());
             return Response.created(uri).build();
         } catch (Exception e ) {
-            return responseError("Erro ao criar server record, content: " + content, e);
+            return responseError("Erro ao criar servidor, content: " + content, e);
+        }
+    }
+
+
+    @PUT
+    @Path("{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response put(String content, @PathParam("id") long id) {
+        try {
+            Server server = getResourceService().update(id, content);
+
+            if (server == null ){
+                return notFound(id);
+            }
+
+            return Response.ok().build();
+        } catch (Exception e ) {
+            return responseError("Erro ao atualizar servidor, content: " + content, e);
         }
     }
 
     @DELETE
     @Path("{id}")
     public Response delete(@PathParam("id") long id){
-
         ServerResourceService service = getResourceService();
-
         service.delete(id);
 
         return Response.ok().build();
@@ -92,6 +106,13 @@ public class ServerResource {
         JsonObject json = new JsonObject();
         json.addProperty("msg", msg);
         return Response.serverError().entity(json.toString()).build();
+    }
+
+    public Response notFound(long id){
+        JsonObject json = new JsonObject();
+        json.addProperty("msg", id + " not found!");
+
+        return Response.status(Response.Status.NOT_FOUND).entity(json.toString()).build();
     }
 }
 
