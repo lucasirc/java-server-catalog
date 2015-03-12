@@ -55,9 +55,11 @@ public class ServerDAO extends DefaultDAO<Server> {
         }
 
         ApplicationDAO appDao = new ApplicationDAO();
-        for( int i =0; i < server.getApps().size(); i++) {
-            Application app = server.getApps().get(i);
-            appDao.save(app);
+        if ( server.getApps() != null ) {
+            for( int i =0; i < server.getApps().size(); i++) {
+                Application app = server.getApps().get(i);
+                appDao.save(app);
+            }
         }
         morphium.store(server);
 

@@ -22,10 +22,12 @@ public class ServerV1Transformer implements ResourceTransformer<Server> {
         List<Map> apps = new ArrayList<Map>();
         serverMap.put("apps", apps);
 
-        for (int i = 0; i <server.getApps().size(); i++) {
-            Application app = server.getApps().get(i);
-            Map map = new ApplicationV1Transformer().entityToMap(app);
-            apps.add(map);
+        if ( server.getApps() != null ) {
+            for (int i = 0; i < server.getApps().size(); i++) {
+                Application app = server.getApps().get(i);
+                Map map = new ApplicationV1Transformer().entityToMap(app);
+                apps.add(map);
+            }
         }
 
         return serverMap;
