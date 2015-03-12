@@ -22,9 +22,13 @@ public class ServerResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response list() {
+    public Response list(@QueryParam("offset") long offset,
+                         @QueryParam("max") long max) {
 
-        List list = getResourceService().list(0l,10l);
+        offset = offset != 0 ? offset : 0;
+        max = Math.min(max != 0 ? max : 10, 100);
+
+        List list = getResourceService().list(offset, max);
 
         String json = new Gson().toJson(list);
         return Response.ok(json, MediaType.APPLICATION_JSON).build();
