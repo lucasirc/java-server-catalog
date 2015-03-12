@@ -66,10 +66,11 @@ public class ServerCatalog {
 
 
                 if(user != null )
-                    cfg.setMongoAdminUser(user);
+                    cfg.setMongoLogin(user);
+
 
                 if (passwd != null)
-                    cfg.setMongoAdminPwd(passwd);
+                    cfg.setMongoPassword(passwd);
 
                 cfg.setDatabase(dbName);
                 cfg.addHost(host, port);
