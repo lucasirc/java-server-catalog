@@ -20,9 +20,13 @@ import java.net.URI;
 public class ServerCatalog {
 
     public static final Logger log = Logger.getLogger(ServerCatalog.class);
-    public static final String host = "localhost";
-    public static final int port = 8081;
-    public static final String link = "http://" + host + ":" + port+"/";
+
+    public static String link;
+
+    static  {
+
+        link = "http://" + ServerCatalogConfig.getConfig("grizzly.host") + ":" + ServerCatalogConfig.getConfig("grizzly.port")+"/";
+    }
 
     public static void main(String[] args) throws IOException {
         configureLogging();
@@ -65,7 +69,7 @@ public class ServerCatalog {
                 log.info("MongoDb config: " + "dbname: " +dbName + ", host: " + host + ", port:"+ port + ", user: " + user);
 
 
-                if(user != null )
+                if(user != null)
                     cfg.setMongoLogin(user);
 
 
