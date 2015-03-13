@@ -1,27 +1,14 @@
 Server Catalog
 ==
-model: http://yuml.me/da68ba32
+Modelo:
 
-## Instalação
+![Alt text](http://yuml.me/da68ba32 "Modelo")
 
-### Ambiente
+# Documentação
 
-Alterar as configurações de banco no arquivo config-DEV.properties (em src/main/java/resources), para rodar a aplicação local. Em produção adicionar a Variável de Ambiente ENV = PROD, ou a propriedade de aplicação ENV = PROD e configurar o config-PROD.properties
-       
-#### Gerar pacote
-Instalar o gradle através do gvm e gerar o war. fazer deploy do war em um container.
-    ```
-       $ curl -s get.gvmtool.net | bash
-       $ gvm install gradle
-       $ cd {root_project}
-       $ gradle war
-       # deploy {root_project}/build/libs/servercatalog-1.0.war no tomcat
-    ```
+A especifiação da API está em RAML, foi criado um portal (através da Mulesoft) da API  para testes, para acessar basta [ clicar aqui](https://anypoint.mulesoft.com/apiplatform/lucasirc/#/portals/apis/14780/versions/15576/pages/18056). Também, abaixo está listado como utilizar a API com curl.
 
-
-    
-
-## Aplicação
+## Aplicação (Model Application)
 
 ### Listar
 ```sh
@@ -55,7 +42,8 @@ curl -v http://servercatalog-env.elasticbeanstalk.com/api/v1/applications/{app_i
 curl -v -X DELETE http://servercatalog-env.elasticbeanstalk.com/api/v1/applications/{app_id}
 ```
 
-## Servidores
+## Servidores (Model Server)
+
 ### Listar
 ```sh
 curl -v  http://servercatalog-env.elasticbeanstalk.com/api/v1/servers
@@ -85,3 +73,23 @@ curl -v http://servercatalog-env.elasticbeanstalk.com/api/v1/servers/{server_id}
 ```sh
 curl -v -X DELETE http://servercatalog-env.elasticbeanstalk.com/api/v1/servers/{server_id}
 ```
+
+
+## Instalação
+
+### Ambiente
+
+Alterar as configurações de banco no arquivo config-DEV.properties (em src/main/java/resources), para rodar a aplicação local. Em produção adicionar a Variável de Ambiente ENV = PROD, ou a propriedade de aplicação ENV = PROD e configurar o config-PROD.properties
+       
+#### Gerar pacote
+
+Instalar o gradle através do gvm e gerar o war. fazer deploy do war em um container.
+
+    ```
+       $ curl -s get.gvmtool.net | bash
+       $ gvm install gradle
+       $ cd {root_project}
+       $ gradle war
+       # deploy {root_project}/build/libs/servercatalog-1.0.war no tomcat
+    ```
+
