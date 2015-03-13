@@ -1,7 +1,7 @@
 Server Catalog
-Aplicação exemplo implementando um API Rest utilizando framework Jersey implementação de JAX-RS.
-
 ==
+Aplicação exemplo implementando um API Rest utilizando framework [Jersey](http://jersey.java.net), [Gradle](http://gradle.org/) para gerenciar dependências e builder e persistência com framework [Morphium](http://sboesebeck.github.io/morphium/) para Mapeamento de modelo e acesso ao MongoDb.
+
 [demo](https://anypoint.mulesoft.com/apiplatform/lucasirc/#/portals/apis/14780/versions/15576/pages/18056) 
 
 # Documentação
