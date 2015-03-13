@@ -66,14 +66,17 @@ public abstract class ResourceService<T>{
         return list;
     }
 
-    public boolean delete(long id) {
+    public T delete(long id) {
         try {
             T entity = dao.get(id);
+            if ( entity == null ){
+                return null;
+            }
 
-            return dao.delete(entity);
-
+            dao.delete(entity);
+            return entity;
         }catch (Exception e) {
-            throw new RuntimeException("Error: cant delete server record, id: " + id, e);
+            throw new RuntimeException("Error: cant delete " + type.getClass() + " record, id: " + id, e);
         }
     }
 
