@@ -1,6 +1,7 @@
 #%RAML 0.8
 title: Server Catalog
 version: v1
+baseUri: http://servercatalog-env.elasticbeanstalk.com/api/v1/
 
 /servers: 
   post:
@@ -21,82 +22,34 @@ version: v1
                 ]
           } 
     responses:
-      200:
-        body:
-          application/json: 
-            example: |
-              {
-                "id": 1,
-                "hostname": "Game Server"
-                "apps": [
-                  {
-                    "id": 1,
-                    "name": "Game 1",
-                    "owner": "joao@gmail.com"
-                  },
-                  {
-                    "id": 2,
-                    "name": "Game 2",
-                    "owner": "jose@gmail.com"
-                  }
-                ]
-              }
-  put:
-    description: Update server record
-    body:
-      application/json: 
-        example: |
-          {
-            "id": 1,
-            "hostname": "Game Server X",
-            "apps": [
-                  {
-                    "id": 1,
-                    "name": "Game 1x",
-                    "owner": "joao@gmail.com"
-                  }
-            ]
-          } 
-    responses:
-      200:
-        body:
-          application/json: 
-            example: |
-              {
-                "id": 1,
-                "hostname": "Game Server X",
-                "apps": [
-                  {
-                    "id": 1,
-                    "name": "Game 1x",
-                    "owner": "joao@gmail.com"
-                  }
-                ]
-              }
+      201:
+        headers:
+          Location:
+  
   get:
     description: Get last 10 updated servers
+    queryParameters:
+      offset:
+      max:
     responses:
-    body:
-          application/json: 
+      200:
+        body:
+          application/json:
             example: |
-              {
-                "data": [
-                  {
-                    "id": 1,
-                    "hostname": "Game Server X",
-                    "apps": [
-                      {
-                        "id": 1,
-                        "name": "Game 1x",
-                        "owner": "joao@gmail.com"
-                      }
-                    ]
-                  }
-                  //{...},{...}
-                ],
-                "total": 100,
-                "offset": 0
-              }
+              [
+                {
+                  "id": 1,
+                  "hostname": "Game Server X",
+                  "apps": [
+                    {
+                      "id": 1,
+                      "name": "Game 1x",
+                      "owner": "joao@gmail.com"
+                    }
+                  ]
+                 }
+                 //,{...},{...}
+              ]
   /{id}/:
     get:
       description: Get server record with {id}
@@ -117,72 +70,71 @@ version: v1
                   ]
                 }
         404:
+          description: Server not found!
           body:
             application/json: 
               example: |
                 {msg: "{id} Not found!"}
+    put:
+      description: Update server record
+      body:
+        application/json: 
+          example: |
+            {            
+              "hostname": "Game Server X",
+              "apps": [
+                    {
+                      "id": 1,
+                      "name": "Game 1x",
+                      "owner": "joao@gmail.com"
+                    }
+              ]
+            } 
+      responses:
+        200:
+          description: Server updated!
+        404:
+          description: Server not found!
+          body:
+            application/json: 
+              example: |
+                {"msg": "{id} not found"}
       
     delete:
       description: Delete a server record
       responses:
         200:
-          description: Deleted with success!      
+          description: Deleted with success!
+        404: 
+          description: Server not found!
           
 /applications:
-  put:
+  get:
+    description: List Applications
+    queryParameters:
+      offset:
+      max:
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [{"id":1, "name": "Game X", "owner": "lucas@gmail.com"},
+               {"id":2, "name": "Game L", "owner": "jose@gmail.com"}]
+              
+  post:
     description: Create Application record
     body:
       application/json:
         example: |
          {
-          "name": "Game X1",
-          "owner": "joao@gmail.com"
-         } 
-    responses:
-      200:
-        body:
-          application/json:
-            example: |
-             {
-              "id" : 1,
-              "name": "Game X1",
-              "owner": "joao@gmail.com"
-             }    
-      400:
-        body:
-          application/json:
-            example: |
-              {
-                "data": 
-                  {
-                    "name": "Game X1",
-                    "owner": "joao@gmail.com"
-                  },
-                "erros": [
-                  {"name": "already exists."}
-                ] 
-              }
-        
-  post:
-    description: Update Application record
-    body:
-      application/json:
-        example: |
-         {
-            "id": 1,
             "name": "Game 1.1",
             "owner": "jose@gmail.com"
          } 
     responses:
-      200:
-        body:
-          application/json:
-            example: |
-             {
-              "id" : 1,
-              "name": "Game 1.1",
-              "owner": "jose@gmail.com"
-             }    
+      201:
+        headers:
+          Location:
   /{id}/:
     get:
       responses:
@@ -197,6 +149,24 @@ version: v1
                }
         404:
           description: "Not found!"
+    put:
+      description: Create Application record
+      body:
+        application/json:
+          example: |
+           {
+            "name": "Game X1",
+            "owner": "joao@gmail.com"
+           } 
+      responses:
+        200:
+          description: Application updated!
+                            
     delete:
       description: "Delete a Application record with {id}"
+      responses:
+        200:
+          description: Deleted!
+        404:
+          description: Application not found!
       
