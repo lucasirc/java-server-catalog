@@ -5,8 +5,11 @@ model: http://yuml.me/da68ba32
 ## Instalação
 
 ### Ambiente
+
+Alterar as configurações de banco no arquivo config-DEV.properties (em src/main/java/resources), para rodar a aplicação local. Em produção adicionar a Variável de Ambiente ENV = PROD, ou a propriedade de aplicação ENV = PROD e configurar o config-PROD.properties
        
-#### Gradle
+#### Gerar pacote
+Instalar o gradle através do gvm e gerar o war. fazer deploy do war em um container.
     ```
        $ curl -s get.gvmtool.net | bash
        $ gvm install gradle
@@ -14,6 +17,8 @@ model: http://yuml.me/da68ba32
        $ gradle war
        # deploy {root_project}/build/libs/servercatalog-1.0.war no tomcat
     ```
+
+
     
 
 ## Aplicação
