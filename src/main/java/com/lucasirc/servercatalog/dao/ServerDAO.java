@@ -7,10 +7,14 @@ import de.caluga.morphium.MorphiumSingleton;
 import de.caluga.morphium.async.AsyncOperationCallback;
 import de.caluga.morphium.async.AsyncOperationType;
 import de.caluga.morphium.query.Query;
+import org.apache.log4j.Logger;
 
 import java.util.*;
 
 public class ServerDAO extends DefaultDAO<Server> {
+
+    public static final Logger log = Logger.getLogger(ApplicationDAO.class);
+
     Morphium morphium;
     public ServerDAO() {
         morphium = MorphiumSingleton.get();
@@ -18,7 +22,7 @@ public class ServerDAO extends DefaultDAO<Server> {
 
     @Override
     public Server get(long id) {
-        System.out.println("Buscando: " + id);
+        log.debug("Buscando Server: " + id);
         Query<Server> query = morphium.createQueryFor(Server.class);
 
         Server server = query.f("id").eq(id).get();
@@ -68,20 +72,19 @@ public class ServerDAO extends DefaultDAO<Server> {
 
 
 
-    public boolean delete(Server server) {
-        System.out.println("Removendo: " + server.getId());
+    public void delete( final Server server) {
+        log.debug("Buscando Server: " + server.getId());
         morphium.delete(server, new AsyncOperationCallback<Server>() {
             @Override
             public void onOperationSucceeded(AsyncOperationType type, Query<Server> q, long duration, List<Server> result, Server entity, Object... param) {
-                System.out.println("Success! ");
+                log.debug("Sucesso ao remover  " + server.getId());
             }
 
             @Override
             public void onOperationError(AsyncOperationType type, Query<Server> q, long duration, String error, Throwable t, Server entity, Object... param) {
-                System.out.println("Error: " + error);
+                log.error("Erro ao remover  " + server.getId() + " Msg: " + error);
             }
         });
 
-        return true;
     }
 }

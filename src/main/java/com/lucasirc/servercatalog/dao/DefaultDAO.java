@@ -12,6 +12,6 @@ public abstract class DefaultDAO<T> {
 
     public abstract T save(T server);
 
-    public abstract boolean delete(T entity);
+    public abstract void delete(T entity);
 
 }
