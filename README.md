@@ -1,12 +1,14 @@
 Server Catalog
 ==
-Modelo:
-
-![Alt text](http://yuml.me/da68ba32 "Modelo")
+[demo](https://anypoint.mulesoft.com/apiplatform/lucasirc/#/portals/apis/14780/versions/15576/pages/18056) 
 
 # Documentação
 
-A especifiação da API está em RAML, foi criado um portal (através da Mulesoft) da API  para testes, para acessar basta [ clicar aqui](https://anypoint.mulesoft.com/apiplatform/lucasirc/#/portals/apis/14780/versions/15576/pages/18056). Também, abaixo está listado como utilizar a API com curl.
+Modelo criado com [yuml](http://yuml.me/) encontra-se em `doc/model.yuml`
+
+![Alt text](http://yuml.me/da68ba32 "Modelo")
+
+A especifiação da API está em RAML, foi criado um portal (através da [Anypoint Plataform da Mulesoft](anypoint.mulesoft.com)) da API  para testes, para acessar basta [ clicar aqui](https://anypoint.mulesoft.com/apiplatform/lucasirc/#/portals/apis/14780/versions/15576/pages/18056). Também, abaixo está listado como utilizar a API com curl.
 
 ## Aplicação (Model Application)
 
@@ -79,7 +81,7 @@ curl -v -X DELETE http://servercatalog-env.elasticbeanstalk.com/api/v1/servers/{
 
 ### Ambiente
 
-Alterar as configurações de banco no arquivo config-DEV.properties (em src/main/java/resources), para rodar a aplicação local. Em produção adicionar a Variável de Ambiente ENV = PROD, ou a propriedade de aplicação ENV = PROD e configurar o config-PROD.properties
+Alterar as configurações de banco no arquivo `config-DEV.properties` (em `src/main/java/resources`), para rodar a aplicação local. Em produção adicionar a Variável de Ambiente `ENV = PROD`, ou a propriedade de aplicação ENV = PROD e configurar o `config-PROD.properties`.
        
 #### Gerar pacote
 
@@ -92,4 +94,3 @@ Instalar o gradle através do gvm e gerar o war. fazer deploy do war em um conta
        $ gradle war
        # deploy {root_project}/build/libs/servercatalog-1.0.war no tomcat
     ```
-
