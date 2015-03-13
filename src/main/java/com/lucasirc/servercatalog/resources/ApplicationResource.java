@@ -6,15 +6,15 @@ import com.lucasirc.servercatalog.model.Application;
 import com.lucasirc.servercatalog.model.Server;
 import com.lucasirc.servercatalog.service.ApplicationResourceService;
 import com.lucasirc.servercatalog.service.ResourceFactory;
-import com.lucasirc.servercatalog.service.ServerResourceService;
-import org.apache.log4j.LogManager;
+
 import org.apache.log4j.Logger;
-import org.apache.log4j.spi.LoggerFactory;
 
 import javax.ws.rs.*;
 
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriInfo;
 import java.net.URI;
 import java.util.List;
 import java.util.Map;
@@ -22,10 +22,12 @@ import java.util.Map;
 @Path("{version}/applications")
 public class ApplicationResource {
 
-    public static final Logger log = LogManager.getLogger(ApplicationResource.class);
+    public static final Logger log = Logger.getLogger(ApplicationResource.class);
 
     @PathParam("version")
     String version;
+    @Context
+    UriInfo uriInfo;
 
     @GET
     @Path("{id}")
@@ -34,12 +36,8 @@ public class ApplicationResource {
         log.debug("App find: " + id);
         Map appMap = getAppResourceService().get(id);
 
-
         if (appMap == null) {
-            JsonObject json = new JsonObject();
-            json.addProperty("msg", id + " not found!");
-
-            return Response.status(Response.Status.NOT_FOUND).entity(json.toString()).build();
+            return notFound(id);
         }
 
         String json = new Gson().toJson(appMap);
@@ -52,12 +50,27 @@ public class ApplicationResource {
         try {
             Application app = getAppResourceService().create(content);
 
-            URI uri = URI.create("/" + version + "/applications/" + app.getId());
+            URI uri = URI.create(uriInfo.getRequestUri() + "/" +app.getId());
             return Response.created(uri).build();
         } catch (Exception e) {
-            e.printStackTrace();
+            return responseError("Erro ao criar Aplicação, content: " + content, e);
+        }
+    }
 
-            return Response.serverError().build();
+    @PUT
+    @Path("{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response put(String content, @PathParam("id") long id) {
+        try {
+            Application app = getAppResourceService().update(id, content);
+
+            if (app == null ){
+                return notFound(id);
+            }
+
+            return Response.ok().build();
+        } catch (Exception e ) {
+            return responseError("Erro ao atualizar servidor, content: " + content, e);
         }
     }
 
@@ -88,5 +101,19 @@ public class ApplicationResource {
 
     public ApplicationResourceService getAppResourceService() {
         return ResourceFactory.getAppResourceService(version);
+    }
+
+    public Response notFound(long id){
+        JsonObject json = new JsonObject();
+        json.addProperty("msg", id + " not found!");
+
+        return Response.status(Response.Status.NOT_FOUND).entity(json.toString()).build();
+    }
+
+    public Response responseError(String msg, Throwable e) {
+        log.error(msg, e);
+        JsonObject json = new JsonObject();
+        json.addProperty("msg", msg);
+        return Response.serverError().entity(json.toString()).build();
     }
 }
