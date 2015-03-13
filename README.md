@@ -1,4 +1,6 @@
 Server Catalog
+Aplicação exemplo implementando um API Rest utilizando framework Jersey implementação de JAX-RS.
+
 ==
 [demo](https://anypoint.mulesoft.com/apiplatform/lucasirc/#/portals/apis/14780/versions/15576/pages/18056) 
 
