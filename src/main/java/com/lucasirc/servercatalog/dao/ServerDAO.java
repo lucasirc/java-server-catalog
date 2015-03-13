@@ -49,6 +49,7 @@ public class ServerDAO extends DefaultDAO<Server> {
         Server server;
 
         if ( serverTmp.getId() == null || serverTmp.getId() == 0) {
+            // @TODO melhorar para gerar id de outra forma, dessa forma pode ter rapeticao
             serverTmp.setId(new Random().nextLong());
             server = serverTmp;
         } else {
@@ -62,7 +63,10 @@ public class ServerDAO extends DefaultDAO<Server> {
         if ( server.getApps() != null ) {
             for( int i =0; i < server.getApps().size(); i++) {
                 Application app = server.getApps().get(i);
-                appDao.save(app);
+                if ( app.getId() == null ) {
+                    appDao.save(app);
+                }
+
             }
         }
         morphium.store(server);

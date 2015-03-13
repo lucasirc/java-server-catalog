@@ -56,6 +56,7 @@ public class ApplicationDAO extends DefaultDAO<Application> {
         Application app;
 
         if ( appTmp.getId() == null || appTmp.getId() == 0 ) {
+            // @TODO melhorar para gerar id de outra forma, dessa forma pode ter rapeticao
             appTmp.setId(new Random().nextLong());
             app = appTmp;
         } else {
