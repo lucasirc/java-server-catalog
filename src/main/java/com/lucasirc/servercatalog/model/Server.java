@@ -6,6 +6,7 @@ import de.caluga.morphium.annotations.Reference;
 import de.caluga.morphium.annotations.caching.Cache;
 import org.bson.types.ObjectId;
 
+import java.util.ArrayList;
 import java.util.List;
 @Entity(translateCamelCase = true)
 @Cache
@@ -15,7 +16,7 @@ public class Server {
     private String hostname;
 
     @Reference
-    private List<Application> apps;
+    private List<Application> apps = new ArrayList<Application>();
 
     public Server(Long id, String hostname) {
         this.id = id;
