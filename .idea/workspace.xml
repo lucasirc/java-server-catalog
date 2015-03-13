@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f22e0f9e-a4de-4cd0-af73-892aa3230779" name="Default" comment="+ utilizando MorphiumSingleton para pegar instancia de morphium">
+    <list default="true" id="f22e0f9e-a4de-4cd0-af73-892aa3230779" name="Default" comment="serverDao ao gravar server, caso application ja exista, associa ao server">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/lucasirc/servercatalog/service/ApplicationResourceServiceTests.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/core/ServerCatalog.java" afterPath="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/core/ServerCatalog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config-PROD.properties" afterPath="$PROJECT_DIR$/src/main/resources/config-PROD.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="server-catalog.iws" />
@@ -37,74 +36,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="ResourceService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1051" max-vertical-offset="1494">
+              <caret line="78" column="12" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResourceFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="264" max-vertical-offset="684">
+              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.88" vertical-offset="170" max-vertical-offset="756">
-              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+            <state vertical-scroll-proportion="-9.32" vertical-offset="361" max-vertical-offset="738">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <file leaf-file-name="ApplicationV1TransformerTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/lucasirc/servercatalog/service/v1/ApplicationV1TransformerTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="522">
-              <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="432">
+              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerCatalogContext.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/core/ServerCatalogContext.java">
+      <file leaf-file-name="ApplicationResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ApplicationResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
-              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-              <folding>
-                <element signature="e#435#436#0" expanded="true" />
-                <element signature="e#484#485#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config-DEV.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/config-DEV.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config-PROD.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/config-PROD.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenericServlet.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/servlet-api/2.5/21599814ad9a605b86f3e6381571beccd861a32/servlet-api-2.5-sources.jar!/javax/servlet/GenericServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="429" max-vertical-offset="5976">
-              <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerCatalog.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/core/ServerCatalog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5443038" vertical-offset="1124" max-vertical-offset="1962">
-              <caret line="72" column="41" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1778" max-vertical-offset="2340">
+              <caret line="102" column="1" selection-start-line="102" selection-start-column="1" selection-end-line="104" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,24 +90,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MorphiumConfig.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.caluga/morphium/2.2.18/7ca3d374e73f84fe29cadadf93d48423f80e26b3/morphium-2.2.18-sources.jar!/de/caluga/morphium/MorphiumConfig.java">
+      <file leaf-file-name="ApplicationDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/ApplicationDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.285714" vertical-offset="7818" max-vertical-offset="15768">
-              <caret line="569" column="33" selection-start-line="569" selection-start-column="29" selection-end-line="569" selection-end-column="33" />
-              <folding>
-                <element signature="e#7267#7268#0" expanded="true" />
-                <element signature="e#7325#7326#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-9.0" vertical-offset="486" max-vertical-offset="1422">
+              <caret line="58" column="90" selection-start-line="58" selection-start-column="90" selection-end-line="58" selection-end-column="90" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerCatalogConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/core/ServerCatalogConfig.java">
+      <file leaf-file-name="ServerDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/ServerDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="1062">
-              <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+            <state vertical-scroll-proportion="-7.75" vertical-offset="917" max-vertical-offset="1764">
+              <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,11 +112,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/model/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.93781096" vertical-offset="55" max-vertical-offset="666">
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding>
+                <element signature="e#505#518#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server-catalog-v1.raml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doc/server-catalog-v1.raml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2725" max-vertical-offset="3186">
+              <caret line="171" column="6" selection-start-line="171" selection-start-column="6" selection-end-line="171" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -270,7 +257,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="2852178275709" />
+        <entry key="$PROJECT_DIR$" value="2852243991934" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -471,21 +458,9 @@
         <option value="$PROJECT_DIR$/src/test/java/com/lucasirc/servercatalog/service/v1/ApplicationV1Transformer.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/lucasirc/servercatalog/service/v1/ApplicationV1TransformerTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/lucasirc/servercatalog/service/v1/ApplicationResourceServiceTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/lucasirc/servercatalog/service/ApplicationResourceServiceTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ApplicationResourceService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ServerResourceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceTransformer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ServerV1Transformer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/model/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/DefaultDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/model/Server.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ApplicationV1Transformer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/ApplicationDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ServerResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/ServerDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ApplicationResource.java" />
         <option value="$PROJECT_DIR$/src/test/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-APP/web.xml" />
@@ -493,11 +468,26 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/core/ServerCatalogContext.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config-prod.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/config-PROD.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/core/ServerCatalogConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config-DEV.properties" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/resources/config-PROD.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/core/ServerCatalog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceTransformer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ServerV1Transformer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ApplicationV1Transformer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/lucasirc/servercatalog/service/ApplicationResourceServiceTests.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/DefaultDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ApplicationResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ServerResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceFactory.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/doc/server-catalog-v1.raml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/model/Server.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/ApplicationDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/ServerDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/neolitec/examples/BasicAuthFilter.java" />
       </list>
     </option>
   </component>
@@ -505,7 +495,7 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1364" />
+    <option name="width" value="1360" />
     <option name="height" value="733" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -533,6 +523,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -562,6 +553,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server-catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server-catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="v1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -635,11 +656,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="servercatalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
+              <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -653,86 +670,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servercatalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server-catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server-catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servercatalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server-catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server-catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servercatalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="doc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -752,6 +696,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../server-catalog-backup" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -844,6 +789,17 @@
       <setting name="params" value="" />
       <setting name="workDir" value="file://$PROJECT_DIR$" />
       <setting name="debug" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
+      <setting name="environment" value="" />
+      <setting name="specsToExecute" value="" />
+      <setting name="tags" value="" />
+      <setting name="parallelNodes" value="" />
+      <setting name="execInParallel" value="false" />
+      <setting name="programParameters" value="" />
+      <setting name="workingDirectory" value="" />
+      <envMap />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -1076,7 +1032,8 @@
       <option name="number" value="Default" />
       <updated>1426037517823</updated>
       <workItem from="1426037521644" duration="14915000" />
-      <workItem from="1426119673913" duration="20079000" />
+      <workItem from="1426119673913" duration="36610000" />
+      <workItem from="1426202566206" duration="7859000" />
     </task>
     <task id="LOCAL-00001" summary="+ delete para applicationResource&#10;+ alterado list do appResource para ter max e offset">
       <created>1426127720418</created>
@@ -1108,15 +1065,93 @@
       <option name="project" value="LOCAL" />
       <updated>1426127873211</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="+ alterado pegar propriedade ENV (no elasticbeanstalk, as propriedades de configuração são adicionadas como propriedade de aplicação no server) caso nao tenha Variavel de Ambiente ENV,">
+      <created>1426184225137</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1426184225137</updated>
+    </task>
+    <task id="LOCAL-00007" summary="+ correcao na listagem de servidores">
+      <created>1426193271225</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1426193271225</updated>
+    </task>
+    <task id="LOCAL-00008" summary="+ utiliza config no arquivo de configuracao para iniciar grizzly">
+      <created>1426193458472</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1426193458472</updated>
+    </task>
+    <task id="LOCAL-00009" summary="+adicionado method put e corrigido a url gerada pelo post">
+      <created>1426200419664</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1426200419664</updated>
+    </task>
+    <task id="LOCAL-00010" summary="+ adicionado id no update transform">
+      <created>1426200437423</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1426200437423</updated>
+    </task>
+    <task id="LOCAL-00011" summary="+ correcao no envio de reponseError">
+      <created>1426205082529</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1426205082529</updated>
+    </task>
+    <task id="LOCAL-00012" summary="+ delete do DAO com retorno void">
+      <created>1426205711130</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1426205711130</updated>
+    </task>
+    <task id="LOCAL-00013" summary="+delete retorna null se nao encontrar">
+      <created>1426205730165</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1426205730165</updated>
+    </task>
+    <task id="LOCAL-00014" summary="+ delete resource retorna 404 caro não existe o registro">
+      <created>1426206413903</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1426206413903</updated>
+    </task>
+    <task id="LOCAL-00015" summary="+ utilizando log4j">
+      <created>1426206429406</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1426206429407</updated>
+    </task>
+    <task id="LOCAL-00016" summary="atualizando doc e readme">
+      <created>1426214886857</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1426214886857</updated>
+    </task>
+    <task id="LOCAL-00017" summary="serverDao ao gravar server, caso application ja exista, associa ao server">
+      <created>1426216499930</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1426216499930</updated>
+    </task>
+    <task id="LOCAL-00018" summary="init de lista de apps ao instanciar um server model">
+      <created>1426217244236</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1426217244236</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34994000" />
+    <option name="totallyTimeSpent" value="59384000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1364" height="733" extended-state="4" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1360" height="733" extended-state="4" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1125,22 +1160,22 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44200626" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4169279" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32941177" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32890856" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3275862" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1169,14 +1204,27 @@
     <MESSAGE value="+ list retornando lista vazia" />
     <MESSAGE value="+ adicionado get, delete e list com mongo" />
     <MESSAGE value="+ utilizando MorphiumSingleton para pegar instancia de morphium" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ utilizando MorphiumSingleton para pegar instancia de morphium" />
+    <MESSAGE value="+ alterado pegar propriedade ENV (no elasticbeanstalk, as propriedades de configuração são adicionadas como propriedade de aplicação no server) caso nao tenha Variavel de Ambiente ENV," />
+    <MESSAGE value="+ correcao na listagem de servidores" />
+    <MESSAGE value="+ utiliza config no arquivo de configuracao para iniciar grizzly" />
+    <MESSAGE value="+adicionado method put e corrigido a url gerada pelo post" />
+    <MESSAGE value="+ adicionado id no update transform" />
+    <MESSAGE value="+ correcao no envio de reponseError" />
+    <MESSAGE value="+ delete do DAO com retorno void" />
+    <MESSAGE value="+delete retorna null se nao encontrar" />
+    <MESSAGE value="+ delete resource retorna 404 caro não existe o registro" />
+    <MESSAGE value="+ utilizando log4j" />
+    <MESSAGE value="atualizando doc e readme" />
+    <MESSAGE value="serverDao ao gravar server, caso application ja exista, associa ao server" />
+    <MESSAGE value="init de lista de apps ao instanciar um server model" />
+    <option name="LAST_COMMIT_MESSAGE" value="init de lista de apps ao instanciar um server model" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ServerResource.java</url>
-          <line>56</line>
+          <line>62</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -1188,7 +1236,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/ServerDAO.java</url>
-          <line>46</line>
+          <line>50</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
@@ -1200,27 +1248,76 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ApplicationResource.java</url>
-          <line>71</line>
+          <line>84</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceService.java</url>
-          <line>43</line>
+          <line>57</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config-DEV.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="324">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ApplicationResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1064" max-vertical-offset="2214">
+          <caret line="62" column="59" selection-start-line="62" selection-start-column="59" selection-end-line="62" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/ServerDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="682" max-vertical-offset="1638">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/server-catalog-v1.raml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="1296">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ServerResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="604" max-vertical-offset="1224">
           <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1246,9 +1343,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="846">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1256,31 +1351,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="990">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#606#607#0" expanded="false" />
-            <element signature="e#637#638#0" expanded="false" />
-            <element signature="e#685#686#0" expanded="false" />
-            <element signature="e#725#726#0" expanded="false" />
-            <element signature="e#752#753#0" expanded="false" />
-            <element signature="e#777#778#0" expanded="false" />
-            <element signature="e#811#812#0" expanded="false" />
-            <element signature="e#839#840#0" expanded="false" />
-            <element signature="e#881#882#0" expanded="false" />
-            <element signature="e#908#909#0" expanded="false" />
-            <element signature="e#959#960#0" expanded="false" />
-            <element signature="e#991#992#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/lucasirc/servercatalog/service/ApplicationResourceServiceTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="396">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1288,9 +1359,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="33" max-vertical-offset="504">
           <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1308,7 +1377,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1494">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1344,101 +1415,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/DefaultDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="630">
-          <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ServerResourceService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="432">
           <caret line="6" column="34" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/model/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="990">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#606#607#0" expanded="false" />
-            <element signature="e#637#638#0" expanded="false" />
-            <element signature="e#685#686#0" expanded="false" />
-            <element signature="e#725#726#0" expanded="false" />
-            <element signature="e#752#753#0" expanded="false" />
-            <element signature="e#777#778#0" expanded="false" />
-            <element signature="e#811#812#0" expanded="false" />
-            <element signature="e#839#840#0" expanded="false" />
-            <element signature="e#881#882#0" expanded="false" />
-            <element signature="e#908#909#0" expanded="false" />
-            <element signature="e#959#960#0" expanded="false" />
-            <element signature="e#991#992#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/lucasirc/servercatalog/service/ApplicationResourceServiceTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/lucasirc/servercatalog/service/v1/ApplicationV1TransformerTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="33" max-vertical-offset="504">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ServerV1Transformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="846">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ApplicationV1Transformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1457,51 +1439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1623" max-vertical-offset="2466">
           <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ServerResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="512" max-vertical-offset="1296">
-          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="1188">
-          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/ApplicationDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="957" max-vertical-offset="1404">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/ServerDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1602">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ApplicationResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="1728">
-          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1517,7 +1454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="429" max-vertical-offset="5976">
           <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1525,7 +1461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.72192514" vertical-offset="702" max-vertical-offset="17982">
           <caret line="91" column="46" selection-start-line="91" selection-start-column="46" selection-end-line="91" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1533,7 +1468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
           <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1550,35 +1484,9 @@
         <state vertical-scroll-proportion="-4.285714" vertical-offset="7818" max-vertical-offset="15768">
           <caret line="569" column="33" selection-start-line="569" selection-start-column="29" selection-end-line="569" selection-end-column="33" />
           <folding>
-            <element signature="e#7267#7268#0" expanded="true" />
-            <element signature="e#7325#7326#0" expanded="true" />
+            <element signature="e#7267#7268#0" expanded="false" />
+            <element signature="e#7325#7326#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/core/ServerCatalogConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="1062">
-          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config-DEV.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.88" vertical-offset="170" max-vertical-offset="756">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1587,8 +1495,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
           <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
           <folding>
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="false" />
+            <element signature="e#484#485#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1597,16 +1505,196 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
           <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/core/ServerCatalogConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="1062">
+          <caret line="40" column="106" selection-start-line="40" selection-start-column="106" selection-end-line="40" selection-end-column="106" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a6dc5db8a12928e583bd3f23e72d3ab611ecd58f/gson-2.2.4-sources.jar!/com/google/gson/JsonElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1101" max-vertical-offset="5094">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a6dc5db8a12928e583bd3f23e72d3ab611ecd58f/gson-2.2.4-sources.jar!/com/google/gson/JsonObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="64.07143" vertical-offset="2568" max-vertical-offset="2880">
+          <caret line="60" column="57" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.0/6800b5f794beb9809d8fef83d21e157b0db6ee19/javax.ws.rs-api-2.0-sources.jar!/javax/ws/rs/core/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11253" max-vertical-offset="25812">
+          <caret line="682" column="34" selection-start-line="682" selection-start-column="34" selection-end-line="682" selection-end-column="34" />
+          <folding>
+            <element signature="e#29941#29942#0" expanded="false" />
+            <element signature="e#30000#30001#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config-DEV.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ServerV1Transformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="347" max-vertical-offset="864">
+          <caret line="42" column="3" selection-start-line="42" selection-start-column="3" selection-end-line="47" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/v1/ApplicationV1Transformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="666">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/core/ServerCatalog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5443038" vertical-offset="1124" max-vertical-offset="1962">
-          <caret line="72" column="41" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="692" max-vertical-offset="2034">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.3448277" vertical-offset="0" max-vertical-offset="1566">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/DefaultDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ServerResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1540" max-vertical-offset="2340">
+          <caret line="102" column="58" selection-start-line="102" selection-start-column="58" selection-end-line="102" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="864" max-vertical-offset="1494">
+          <caret line="78" column="12" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/lucasirc/servercatalog/service/v1/ApplicationV1TransformerTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="33" max-vertical-offset="504">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/resources/ApplicationResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1778" max-vertical-offset="2340">
+          <caret line="102" column="1" selection-start-line="102" selection-start-column="1" selection-end-line="104" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/service/ResourceFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="264" max-vertical-offset="684">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.32" vertical-offset="361" max-vertical-offset="738">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/server-catalog-v1.raml">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2725" max-vertical-offset="3186">
+          <caret line="171" column="6" selection-start-line="171" selection-start-column="6" selection-end-line="171" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/ApplicationDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.0" vertical-offset="486" max-vertical-offset="1422">
+          <caret line="58" column="90" selection-start-line="58" selection-start-column="90" selection-end-line="58" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/dao/ServerDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.75" vertical-offset="917" max-vertical-offset="1764">
+          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lucasirc/servercatalog/model/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.93781096" vertical-offset="55" max-vertical-offset="666">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="e#505#518#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1617,10 +1705,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>Gradle : server-catalog : server-catalog-1.0.war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1628,7 +1718,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited>Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
