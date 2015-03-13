@@ -92,11 +92,18 @@ public class ApplicationResource {
     @DELETE
     @Path("{id}")
     public Response delete(@PathParam("id") long id){
-        ApplicationResourceService service = getAppResourceService();
+        try {
+            ApplicationResourceService service = getAppResourceService();
+            Application app = service.delete(id);
 
-        service.delete(id);
+            if (app == null) {
+                return notFound(id);
+            }
+            return Response.ok().build();
+        }catch (Exception e) {
+            return responseError("Erro ao remover Aplicação: " + id + ". Contacte o Administrador!", e);
+        }
 
-        return Response.ok().build();
     }
 
     public ApplicationResourceService getAppResourceService() {

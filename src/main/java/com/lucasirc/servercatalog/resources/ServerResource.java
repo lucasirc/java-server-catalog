@@ -90,10 +90,18 @@ public class ServerResource {
     @DELETE
     @Path("{id}")
     public Response delete(@PathParam("id") long id){
-        ServerResourceService service = getResourceService();
-        service.delete(id);
+        try {
+            ServerResourceService service = getResourceService();
+            Server server = service.delete(id);
 
-        return Response.ok().build();
+            if ( server == null ){
+                return notFound(id);
+            }
+
+            return Response.ok().build();
+        }catch (Exception e) {
+            return responseError("Erro ao remover Servidor: " + id + ". Contacte o Administrador!", e);
+        }
     }
 
     public ServerResourceService getResourceService() {
