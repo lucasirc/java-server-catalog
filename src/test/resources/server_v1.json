@@ -1,0 +1,17 @@
+{
+  "id": 12,
+  "hostname": "gamexserver",
+  "apps": [
+    {
+      "id": 123,
+      "name": "Game 1",
+      "owner": "lucasirc"
+    },
+    {
+      "id": 124,
+      "name": "Game 2",
+      "owner": "jose"
+    }
+  ]
+
+}
