@@ -120,7 +120,7 @@ public class ServerResource {
         JsonObject json = new JsonObject();
         json.addProperty("msg", id + " not found!");
 
-        return Response.status(Response.Status.NOT_FOUND).entity(json.toString()).build();
+        return Response.status(Response.Status.NOT_FOUND).entity(json.toString()).type(MediaType.APPLICATION_JSON).build();
     }
 }
 

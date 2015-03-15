@@ -11,6 +11,10 @@ public class ServerResourceService extends ResourceService<Server> {
         dao = new ServerDAO();
     }
 
+    public ServerResourceService(ResourceTransformer<Server> transformer, ServerDAO dao) {
+        super(transformer);
+        this.dao = dao;
+    }
     @Override
     public DefaultDAO<Server> getDAO() {
         return dao;
