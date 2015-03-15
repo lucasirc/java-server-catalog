@@ -10,6 +10,10 @@ public class ApplicationResourceService  extends ResourceService<Application> {
         super(transformer);
         dao = new ApplicationDAO();
     }
+    public ApplicationResourceService(ResourceTransformer<Application> transformer, ApplicationDAO daoTmp) {
+        super(transformer);
+        this.dao = daoTmp;
+    }
 
     @Override
     public DefaultDAO<Application> getDAO() {

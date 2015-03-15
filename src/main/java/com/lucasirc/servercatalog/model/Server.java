@@ -18,7 +18,8 @@ public class Server {
     @Reference
     private List<Application> apps = new ArrayList<Application>();
 
-    public Server(Long id, String hostname) {
+    public
+    Server(Long id, String hostname) {
         this.id = id;
 
         this.hostname = hostname;
